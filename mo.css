@@ -5,6 +5,18 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
+  .contenedor-img {
+            max-width: 600px; /* Ancho máximo en pantallas grandes */
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .contenedor-img img {
+            width: 100%;       /* Se adapta al contenedor */
+            height: auto;      /* Mantiene proporciones */
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
 body {
     font-family: 'Georgia', serif;
