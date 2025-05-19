@@ -19,7 +19,31 @@
 </head>
 <body>
    <center><h1>CATALOGO</h1></center> 
-    
+	  </section>
+     <section id="carrito">
+    <h2>🛒 Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+  </section>
+
+     <script>
+    function toggleDetails(id) {
+      const detalles = document.getElementById(id);
+      detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
+    }
+
+    let total = 0;
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalElement = document.getElementById("total");
+
+    function agregarAlCarrito(nombre, precio) {
+      const li = document.createElement("li");
+      li.textContent = `${nombre} - $${precio.toFixed(2)}`;
+      listaCarrito.appendChild(li);
+      total += precio;
+      totalElement.textContent = total.toFixed(2);
+    }
+  </script
    
 	 <header>
         <div class="contenedor-img">
@@ -41,26 +65,30 @@
           <div class="categorias-lista">
 
             <div class="categoria">
-                <img src= ar.jpg alt="Ramo de Rosas Rojas">
-                <h3>Ramo de rosas rojas </h3>
-                <p>$390.00</p>
+                <img src= ar.jpg alt="Ramo de rosas convinadas">
+                <h3>Ramo de rosas convinadas </h3>
+      <p class="precio">$380.00</p>
                 <button onclick="toggleDetails('detalles-1')">Ver detalles</button>
                 <div id="detalles-1" class="detalles">
-                    <p><strong>Descripción:</strong> 14 rosas rojas con papel coreano rojo y dorado y una mariposa dorada.</p>
-                    <p><strong>Material:</strong>liston rojo,palos de madera y papel coreano </p>
-                    <p><strong>Ramos disponibles:</strong> 70 ramos</p>
+	        <button onclick="agregarAlCarrito('Ramo de rosas convinadas', 380)">Agregar al carrito</button>
+
+                    <p><strong>Descripción:</strong> 6 rosas,2 rojas,2 rosas,2 blancas, con papel coreano negro y esquinas trasparentes , y una mariposa tornasol.</p>
+                    <p><strong>Material:</strong>liston rojo,blanco y rosado,palos de madera,unicel,luces,perlitas,mariposa tornasol y papel coreano </p>
+                    <p><strong>Ramos disponibles:</strong> 10 </p>
                 </div>
             </div> 
 
             <div class="categoria">
-                <img src= dfgh.jpg alt="Ramo de Rosas Rojas">
-                <h3>Ramo de rosas rojas </h3>
-                <p>$390.00</p>
+                <img src= dfgh.jpg alt="Un girasol Rosita">
+                <h3>Un girasol</h3>
+      <p class="precio">$80.00</p>
                 <button onclick="toggleDetails('detalles-1')">Ver detalles</button>
                 <div id="detalles-1" class="detalles">
-                    <p><strong>Descripción:</strong> 14 rosas rojas con papel coreano rojo y dorado y una mariposa dorada.</p>
-                    <p><strong>Material:</strong>liston rojo,palos de madera y papel coreano </p>
-                    <p><strong>Ramos disponibles:</strong> 70 ramos</p>
+	  	        <button onclick="agregarAlCarrito('Un girasol Rosita', 80)">Agregar al carrito</button>
+
+                    <p><strong>Descripción:</strong>un girasol rosado con luces incluidas y una mariposa.</p>
+                    <p><strong>Material:</strong>liston rojo,palo de madera,fomi adiamantado cafe y papel coreano </p>
+                    <p><strong>Ramos disponibles:</strong> 15 ramos</p>
                 </div>
             </div>  
 
@@ -74,7 +102,7 @@
                     <p><strong>Material:</strong>liston rojo,palos de madera y papel coreano </p>
                     <p><strong>Ramos disponibles:</strong> 70 ramos</p>
                 </div>
-            </div>  <div class="categorias-lista">
+            </div>  
 
             <div class="categoria">
                 <img src= eg.jpg alt="Ramo de Rosas Rojas">
