@@ -36,32 +36,7 @@
             </ul>
         </nav>
     </header>
-	  </section>
-     <section id="carrito">
-    <h2>🛒 Carrito de Compras</h2>
-    <ul id="lista-carrito"></ul>
-    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
-  </section>
-
-     <script>
-    function toggleDetails(id) {
-      const detalles = document.getElementById(id);
-      detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
-    }
-
-    let total = 0;
-    const listaCarrito = document.getElementById("lista-carrito");
-    const totalElement = document.getElementById("total");
-
-    function agregarAlCarrito(nombre, precio) {
-      const li = document.createElement("li");
-      li.textContent = `${nombre} - $${precio.toFixed(2)}`;
-      listaCarrito.appendChild(li);
-      total += precio;
-      totalElement.textContent = total.toFixed(2);
-    }
-  </script
-
+	 
     <section id="Lista">
           <div class="categorias-lista">
 
@@ -321,6 +296,32 @@
                 </div>
             </div>
     </section>
+	 </section>
+     <section id="carrito">
+    <h2>🛒 Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+  </section>
+
+     <script>
+    function toggleDetails(id) {
+      const detalles = document.getElementById(id);
+      detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
+    }
+
+    let total = 0;
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalElement = document.getElementById("total");
+
+    function agregarAlCarrito(nombre, precio) {
+      const li = document.createElement("li");
+      li.textContent = `${nombre} - $${precio.toFixed(2)}`;
+      listaCarrito.appendChild(li);
+      total += precio;
+      totalElement.textContent = total.toFixed(2);
+    }
+  </script>
+
   <footer id="contacto">
  <center> <p>&copy; 2025 Rosas Eternas MS. Todos los derechos reservados.</p></center></body>
 </html>
