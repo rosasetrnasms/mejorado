@@ -28,13 +28,12 @@
   <h2>🛒 Carrito de Compras</h2>
   <ul id="lista-carrito"></ul>
   <p><strong>Total:</strong> $<span id="total">0.00</span></p>
-</section>
 
   <h3>💳 Método de Pago</h3>
   <form id="metodo-pago">
-    <label><input type="radio" name="pago" value="credito" required> Tarjeta de Crédito</label><br>
-    <label><input type="radio" name="pago" value="debito"> Tarjeta de Débito</label><br>
-    <label><input type="radio" name="pago" value="transferencia"> Transferencia Bancaria</label><br><br>
+    <label><input type="radio" name="pago" value="Crédito" required> Tarjeta de Crédito</label><br>
+    <label><input type="radio" name="pago" value="Débito"> Tarjeta de Débito</label><br>
+    <label><input type="radio" name="pago" value="Transferencia"> Transferencia Bancaria</label><br><br>
     <button type="submit">Confirmar Compra</button>
   </form>
 </section>
@@ -51,12 +50,11 @@
 
   function agregarAlCarrito(nombre, precio) {
     const li = document.createElement("li");
-
     const texto = document.createElement("span");
     texto.textContent = `${nombre} - $${precio.toFixed(2)}`;
 
     const botonEliminar = document.createElement("button");
-    botonEliminar.textContent = "eliminar";
+    botonEliminar.textContent = "Eliminar";
     botonEliminar.style.marginLeft = "10px";
     botonEliminar.onclick = function () {
       listaCarrito.removeChild(li);
@@ -71,6 +69,15 @@
     total += precio;
     totalElement.textContent = total.toFixed(2);
   }
+
+  // Evento para confirmar compra y mostrar método de pago
+  document.getElementById("metodo-pago").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const metodo = document.querySelector('input[name="pago"]:checked');
+    if (metodo) {
+      alert(`Has seleccionado pagar con: ${metodo.value}`);
+    }
+  });
 </script>
 
 <footer style="text-align: center; padding: 1rem;">
