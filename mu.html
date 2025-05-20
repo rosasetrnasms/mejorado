@@ -24,10 +24,11 @@
       </ul>
     </nav>
   </header>
-<section id="carrito">
+   <section id="carrito">
   <h2>🛒 Carrito de Compras</h2>
   <ul id="lista-carrito"></ul>
   <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+</section>
 
   <h3>💳 Método de Pago</h3>
   <form id="metodo-pago">
@@ -51,9 +52,11 @@
   function agregarAlCarrito(nombre, precio) {
     const li = document.createElement("li");
 
-    // Botón para eliminar el producto
+    const texto = document.createElement("span");
+    texto.textContent = `${nombre} - $${precio.toFixed(2)}`;
+
     const botonEliminar = document.createElement("button");
-    botonEliminar.textContent = "❌ Quitar";
+    botonEliminar.textContent = "eliminar";
     botonEliminar.style.marginLeft = "10px";
     botonEliminar.onclick = function () {
       listaCarrito.removeChild(li);
@@ -61,23 +64,15 @@
       totalElement.textContent = total.toFixed(2);
     };
 
-    li.textContent = `${nombre} - $${precio.toFixed(2)}`;
+    li.appendChild(texto);
     li.appendChild(botonEliminar);
     listaCarrito.appendChild(li);
 
     total += precio;
     totalElement.textContent = total.toFixed(2);
   }
-
-  // Evento al enviar método de pago
-  document.getElementById("metodo-pago").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const metodoSeleccionado = document.querySelector('input[name="pago"]:checked');
-    if (metodoSeleccionado) {
-      alert(`Has seleccionado pagar con: ${metodoSeleccionado.value.toUpperCase()}`);
-    }
-  });
 </script>
+
 <footer style="text-align: center; padding: 1rem;">
     <p>&copy; 2025 Rosas Eternas MS. Todos los derechos reservados.</p>
   </footer>
