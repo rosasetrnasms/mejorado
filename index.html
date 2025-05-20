@@ -339,12 +339,13 @@
             </div>
     </section>
 	 </section>
+	<center><h1>♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥</h1></center>
 <section id="carrito">
-  <h2>🛒 Carrito de Compras</h2>
+  <h2> carrito de Compras</h2>
   <ul id="lista-carrito"></ul>
   <p><strong>Total:</strong> $<span id="total">0.00</span></p>
 
-  <h3>💳 Método de Pago</h3>
+  <h3> Metodo de Pago</h3>
   <form id="metodo-pago">
     <label><input type="radio" name="pago" value="Crédito" required> Tarjeta de Crédito</label><br>
     <label><input type="radio" name="pago" value="Débito"> Tarjeta de Débito</label><br>
@@ -393,7 +394,7 @@
     e.preventDefault();
     const metodo = document.querySelector('input[name="pago"]:checked');
     if (metodo && listaCarrito.children.length > 0) {
-      mensajeCompra.textContent = `✅ ¡Compra realizada con éxito usando ${metodo.value}!`;
+      mensajeCompra.textContent = `¡compra realizada con exito usando ${metodo.value}!`;
 
       // Limpiar el carrito
       listaCarrito.innerHTML = "";
@@ -405,7 +406,7 @@
         radio.checked = false;
       });
     } else if (listaCarrito.children.length === 0) {
-      mensajeCompra.textContent = "⚠️ No hay productos en el carrito.";
+      mensajeCompra.textContent = "⚠ no hay productos en el carrito.";
     }
   });
 </script>
