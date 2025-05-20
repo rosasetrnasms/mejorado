@@ -339,7 +339,7 @@
             </div>
     </section>
 	 </section>
- <section id="carrito">
+<section id="carrito">
   <h2>🛒 Carrito de Compras</h2>
   <ul id="lista-carrito"></ul>
   <p><strong>Total:</strong> $<span id="total">0.00</span></p>
@@ -351,6 +351,8 @@
     <label><input type="radio" name="pago" value="Transferencia"> Transferencia Bancaria</label><br><br>
     <button type="submit">Confirmar Compra</button>
   </form>
+
+  <p id="mensaje-compra" style="color: green; font-weight: bold;"></p>
 </section>
 
 <script>
@@ -362,6 +364,7 @@
   let total = 0;
   const listaCarrito = document.getElementById("lista-carrito");
   const totalElement = document.getElementById("total");
+  const mensajeCompra = document.getElementById("mensaje-compra");
 
   function agregarAlCarrito(nombre, precio) {
     const li = document.createElement("li");
@@ -385,15 +388,28 @@
     totalElement.textContent = total.toFixed(2);
   }
 
-  // Evento para confirmar compra y mostrar método de pago
+  // Evento para confirmar compra y reiniciar todo
   document.getElementById("metodo-pago").addEventListener("submit", function (e) {
     e.preventDefault();
     const metodo = document.querySelector('input[name="pago"]:checked');
-    if (metodo) {
-      alert(`Has seleccionado pagar con: ${metodo.value}`);
+    if (metodo && listaCarrito.children.length > 0) {
+      mensajeCompra.textContent = `✅ ¡Compra realizada con éxito usando ${metodo.value}!`;
+
+      // Limpiar el carrito
+      listaCarrito.innerHTML = "";
+      total = 0;
+      totalElement.textContent = total.toFixed(2);
+
+      // Limpiar selección de método de pago
+      document.querySelectorAll('input[name="pago"]').forEach(radio => {
+        radio.checked = false;
+      });
+    } else if (listaCarrito.children.length === 0) {
+      mensajeCompra.textContent = "⚠️ No hay productos en el carrito.";
     }
   });
 </script>
+
 
 
 
