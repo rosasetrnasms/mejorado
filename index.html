@@ -337,30 +337,46 @@
             </div>
     </section>
 	 </section>
-     <section id="carrito">
-    <h2>🛒 Carrito de Compras</h2>
-    <ul id="lista-carrito"></ul>
-    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
-  </section>
+    <section id="carrito">
+  <h2>🛒 Carrito de Compras</h2>
+  <ul id="lista-carrito"></ul>
+  <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+</section>
 
-     <script>
-    function toggleDetails(id) {
-      const detalles = document.getElementById(id);
-      detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
-    }
+<script>
+  function toggleDetails(id) {
+    const detalles = document.getElementById(id);
+    detalles.style.display = detalles.style.display === 'block' ? 'none' : 'block';
+  }
 
-    let total = 0;
-    const listaCarrito = document.getElementById("lista-carrito");
-    const totalElement = document.getElementById("total");
+  let total = 0;
+  const listaCarrito = document.getElementById("lista-carrito");
+  const totalElement = document.getElementById("total");
 
-    function agregarAlCarrito(nombre, precio) {
-      const li = document.createElement("li");
-      li.textContent = `${nombre} - $${precio.toFixed(2)}`;
-      listaCarrito.appendChild(li);
-      total += precio;
+  function agregarAlCarrito(nombre, precio) {
+    const li = document.createElement("li");
+
+    const texto = document.createElement("span");
+    texto.textContent = `${nombre} - $${precio.toFixed(2)}`;
+
+    const botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "❌";
+    botonEliminar.style.marginLeft = "10px";
+    botonEliminar.onclick = function () {
+      listaCarrito.removeChild(li);
+      total -= precio;
       totalElement.textContent = total.toFixed(2);
-    }
-  </script>
+    };
+
+    li.appendChild(texto);
+    li.appendChild(botonEliminar);
+    listaCarrito.appendChild(li);
+
+    total += precio;
+    totalElement.textContent = total.toFixed(2);
+  }
+</script>
+
 
   <footer id="contacto">
  <center> <p>&copy; 2025 Rosas Eternas MS. Todos los derechos reservados.</p></center></body>
