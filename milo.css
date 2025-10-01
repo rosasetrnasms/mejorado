@@ -27,7 +27,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: #4d1113;
+    background-color: #513a6b;
     color: #F5F5F5;
     padding: 40px 20px;
     text-align: center;
@@ -136,7 +136,7 @@ header p {
 }
 
 .btn-primary:hover {
-    background-color: #b9912d;
+    background-color: #ede968;
     transform: translateY(-3px);
 }
 
@@ -214,3 +214,4 @@ footer {
     margin-top: 60px;
     font-size: 1em;
 }
+
