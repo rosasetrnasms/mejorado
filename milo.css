@@ -5,22 +5,22 @@
     box-sizing: border-box;
 }
 .contenedor-img {
-            max-width: 600px; /* Ancho máximo en pantallas grandes */
-            margin: 0 auto;
-            padding: 10px;
-        }
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-        .contenedor-img img {
-            width: 100%;       /* Se adapta al contenedor */
-            height: auto;      /* Mantiene proporciones */
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 /* Fuente general */
 body {
     font-family: 'Georgia', serif;
-    background-color: #121212;
+    background-color: #2e2e2e; /* gris oscuro */
     color: #F5F5F5;
     line-height: 1.6;
 }
@@ -46,7 +46,7 @@ header {
 
 header p {
     font-size: 1.4em;
-    color: #F8BBD0;
+    color: #FFD700; /* dorado */
     font-style: italic;
 }
 
@@ -63,7 +63,7 @@ header p {
 }
 
 .navbar a {
-    color: #F8BBD0;
+    color: #FFD700; /* dorado */
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
@@ -111,7 +111,7 @@ header p {
 .hero h2 {
     font-size: 3.5em;
     margin-bottom: 15px;
-    color: #F8BBD0;
+    color: #FFD700; /* dorado */
     text-transform: uppercase;
 }
 
@@ -124,7 +124,7 @@ header p {
 
 .btn-primary {
     background-color: #D4AF37;
-    color: #121212;
+    color: #2e2e2e; /* gris oscuro */
     padding: 15px 35px;
     font-size: 1.1em;
     border-radius: 30px;
@@ -144,7 +144,7 @@ header p {
 .productos {
     padding: 70px 20px;
     text-align: center;
-    background-color: #181818;
+    background-color: #3a3a3a; /* gris medio */
 }
 
 .productos h2 {
@@ -159,7 +159,7 @@ header p {
     display: inline-block;
     width: 280px;
     margin: 20px;
-    background-color: #2a2a2a;
+    background-color: #444; /* gris oscuro */
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -184,14 +184,14 @@ header p {
 }
 
 .producto-card p {
-    color: #AEC6CF;
+    color: #FFD700; /* dorado */
     font-size: 1.1em;
     margin-bottom: 15px;
 }
 
 .producto-card button {
-    background-color: #F8BBD0;
-    color: #121212;
+    background-color: #FFD700; /* dorado */
+    color: #2e2e2e; /* gris oscuro */
     padding: 12px 25px;
     border: none;
     border-radius: 30px;
@@ -202,7 +202,7 @@ header p {
 }
 
 .producto-card button:hover {
-    background-color: #f2a7bd;
+    background-color: #f8e889;
 }
 
 /* FOOTER */
@@ -214,4 +214,5 @@ footer {
     margin-top: 60px;
     font-size: 1em;
 }
+
 
