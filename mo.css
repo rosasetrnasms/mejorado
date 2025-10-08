@@ -9,7 +9,7 @@
 .categoria img {
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: flex;
     border-radius: 8px;
 }
 
@@ -284,5 +284,6 @@ button:hover {
 .limon {
     background-color: #2e2e2e;
 }
+
 
 
