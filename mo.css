@@ -6,31 +6,29 @@
     transition: all 0.3s ease;
 }
 
-  .categoria img {
-      width: 200px;     /* Ajusta si necesitas otro tamaño */
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px; /* Opcional */
-  }
+.categoria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-    
+.contenedor-img {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-  .contenedor-img {
-            max-width: 600px; /* Ancho máximo en pantallas grandes */
-            margin: 0 auto;
-            padding: 10px;
-        }
-
-        .contenedor-img img {
-            width: 100%;       /* Se adapta al contenedor */
-            height: auto;      /* Mantiene proporciones */
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 body {
     font-family: 'Georgia', serif;
-    background-color: #1F1F1F;
+    background-color: #3a3a3a; /* Gris medio */
     color: #F5F5F5;
     line-height: 1.6;
 }
@@ -48,7 +46,7 @@ header {
 .titulo-principal {
     font-size: 4.2em;
     font-weight: bold;
-    color: #F8BBD0;
+    color: #D4AF37;
     letter-spacing: 6px;
     text-transform: uppercase;
 }
@@ -66,7 +64,7 @@ header {
 }
 
 .navbar a {
-    color: #F8BBD0;
+    color: #D4AF37;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
@@ -76,14 +74,14 @@ header {
 }
 
 .navbar a:hover {
-    color: #D4AF37;
-    border-bottom: 2px solid #D4AF37;
+    color: #b9912d;
+    border-bottom: 2px solid #b9912d;
 }
 
 /* SECCIONES */
 section {
     padding: 60px 20px;
-    background-color: #121212;
+    background-color: #2e2e2e; /* Gris oscuro */
     text-align: center;
 }
 
@@ -96,7 +94,7 @@ section {
 
 #inicio p {
     font-size: 1.5em;
-    color: #B0B0B0;
+    color: #DCDCDC; /* Texto gris claro */
     margin-bottom: 30px;
 }
 
@@ -110,7 +108,7 @@ section {
 }
 
 .categoria {
-    background-color: #2a2a2a;
+    background-color: #4a4a4a; /* Gris más claro */
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
     width: 300px;
@@ -135,20 +133,20 @@ section {
 
 .categoria h3 {
     font-size: 1.8em;
-    color: #F8BBD0;
+    color: #D4AF37;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
 .categoria p {
     font-size: 1.2em;
-    color: #ccc;
+    color: #DCDCDC;
     margin-bottom: 20px;
 }
 
 .categoria button {
     background-color: #D4AF37;
-    color: #121212;
+    color: #2e2e2e;
     padding: 10px 25px;
     border: none;
     border-radius: 30px;
@@ -167,7 +165,7 @@ section {
 .container {
     max-width: 700px;
     margin: 50px auto;
-    background-color: #2a2a2a;
+    background-color: #4a4a4a;
     padding: 35px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -202,8 +200,8 @@ input[type="url"]:focus {
 }
 
 button {
-    background-color: #F8BBD0;
-    color: #121212;
+    background-color: #D4AF37;
+    color: #2e2e2e;
     padding: 14px 20px;
     border: none;
     border-radius: 30px;
@@ -215,7 +213,7 @@ button {
 }
 
 button:hover {
-    background-color: #f2a7bd;
+    background-color: #b9912d;
 }
 
 /* LISTA DE PRODUCTOS */
@@ -230,7 +228,7 @@ button:hover {
 #Lista .categoria {
     width: 250px;
     border: none;
-    background-color: #2a2a2a;
+    background-color: #4a4a4a;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -247,6 +245,5 @@ button:hover {
 
 /* FONDO PERSONALIZADO */
 .limon {
-    background-color: #1F1F1F;
+    background-color: #3a3a3a;
 }
-
