@@ -1,0 +1,180 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor-img {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fuente general */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #2e2e2e; /* gris oscuro */
+    color: #F5F5F5;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #513a6b;
+    color: #F5F5F5;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #D4AF37;
+}
+
+.titulo-principal {
+    font-size: 4em;
+    font-weight: bold;
+    color: #F5F5F5;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.4em;
+    color: #FFD700; /* dorado */
+    font-style: italic;
+}
+
+}
+
+/* NAVBAR */
+.navbar {
+    list-style: none;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar a {
+    color: #FFD700; /* dorado */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+}
+
+.navbar a:hover {
+    color: #D4AF37;
+    border-bottom: 2px solid #D4AF37;
+}
+
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #FFD700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* TABLA DE PRODUCTOS */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+thead {
+    background-color: #513a6b; /* morado oscuro */
+}
+
+thead th {
+    padding: 16px;
+    font-size: 1.1em;
+    color: #000000;
+    text-transform: uppercase;
+    border-bottom: 2px solid #FFD700;
+}
+
+tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #555;
+}
+
+/* INPUTS EN LA TABLA */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    color: #F5F5F5;
+    border: 1px solid #B39DDB;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #FFD700;
+    background-color: #3a3a3a;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+        border: 1px solid #444;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #3a3a3a;
+    }
+
+    tbody td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        margin-bottom: 10px;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        font-weight: bold;
+        color: #B39DDB;
+        text-transform: uppercase;
+    }
+
+    input {
+        margin-top: 6px;
+    }
+}
